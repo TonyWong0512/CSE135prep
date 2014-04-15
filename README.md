@@ -2,7 +2,7 @@ CSE135prep
 ==========
 
 This repository is to help UCSD CSE 135 Spring 2014 students for their project. 
-What follows is a walkthrough for students that explains how to get started with the CSE 135 project, including how to install all the required libraries and frameworks. 
+What follows is a walkthrough for students that explains how to get started with the CSE 135 project, including how to install all the required libraries and frameworks and example application. 
 Only the following technologies are required for the project :
 
  - Apache Tomcat Server
