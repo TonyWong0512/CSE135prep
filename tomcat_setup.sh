@@ -7,4 +7,5 @@ sudo mv apache-tomcat-7.0.53 /usr/local/
 sudo apt-get install default-jdk
 echo "export JAVA_HOME=/usr/lib/jvm/default-java" >> ~/.bashrc
 echo "export CATALINA_HOME=/usr/local/apache-tomcat-7.0.53" >> ~/.bashrc
+source ~/.bashrc
 echo "Tomcat + Java installation done!"
