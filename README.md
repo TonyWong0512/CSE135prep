@@ -54,7 +54,7 @@ It is very easy to install git on ubuntu. Just type the following command on the
 
 #### Setup Java + Tomcat
 
-I have written a script called `tomcat_setup.sh` that should be included in this git repository. You can execute this script on your machine.
+I have written a script called `Tomcat/tomcat_setup.sh` that should be included in this git repository. Make sure to make it executable by using the command `chmod +x tomcat_setup.sh` before executing it. You can execute this script on your machine.
 It will install java (v1.6) and Tomcat (v7.0.53) on your VM, move them to appropriate directories and setup your `$CATALINA_HOME` and `$JAVA_HOME` variables.
 
 The only thing this script does not do is setup your tomcat users :
