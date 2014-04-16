@@ -66,8 +66,21 @@ You can download eclipse by going on the Ubuntu Software Center and looking for 
 
 #### Setup Postgres
 
-You should follow this [link](https://www.digitalocean.com/community/articles/how-to-install-and-use-postgresql-on-ubuntu-12-04). This way, you should get a recent version of PostgreSQL.
-My suggestion at this point would be to play around with Postgres to get used to it. You could do that either using the `psql` command on the terminal or by using [PGAdmin](http://www.pgadmin.org/). 
+Issue the following command on your terminal (you need admin privileges) :
+
+        sudo apt-get install postgresql postgresql-contrib
+
+This way, you should get a recent version of PostgreSQL.
+The PostgreSQL installation creates a unix user called `postgres` which is the only one allowed (at first) to create databases. 
+It would be better if you could do that yourself :
+ - Enter the command `sudo passwd postgres` on your terminal. This lets you create a new password for the postgres user (for some reason, the postgres user does not have a default password).
+ - Enter the command `su postgres` and use the password to login into the postgres user.
+ - Enter the following commands :
+
+        createuser -s YOUR_UNIX_USERNAME
+        createdb cse135
+
+ - Log out from the postgres user and enter the command `psql -d cse135`. This connects you to the database, from here you can issue SQL statements.
 
 #### Setup A Tomcat server on Eclipse
 
