@@ -52,18 +52,22 @@ It is very easy to install git on ubuntu. Just type the following command on the
 
    sudo apt-get install git
 
+#### Setup Java + Tomcat
+
+I have written a script called `tomcat_setup.sh` that should be included in this git repository. You can execute this script on your machine.
+It will install java (v1.6) and Tomcat (v7.0.53) on your VM, move them to appropriate directories and setup your `$CATALINA_HOME` and `$JAVA_HOME` variables.
+
+The only thing this script does not do is setup your tomcat users :
+ - copy the file `Tomcat/tomcat_users.xml` from this repository into `$CATALINA_HOME/conf`.
+
 #### Install Eclipse
 
-You can download eclipse by going on the Ubuntu Software Center and looking for Eclipse. Installing Eclipse that way will also make sure that Java is installed on your machine.
+You can download eclipse by going on the Ubuntu Software Center and looking for Eclipse.
 
 #### Setup Postgres
 
 You should follow this [link](https://www.digitalocean.com/community/articles/how-to-install-and-use-postgresql-on-ubuntu-12-04). This way, you should get a recent version of PostgreSQL.
 My suggestion at this point would be to play around with Postgres to get used to it. You could do that either using the `psql` command on the terminal or by using [PGAdmin](http://www.pgadmin.org/). 
-
-#### Setup Tomcat
-
-Coming soon.
 
 #### Setup A Tomcat server on Eclipse
 
@@ -71,10 +75,7 @@ Coming soon.
     - Go to Eclipse > Preferences > Server > Run Time Environments
     - Add...
     - Choose Apache Tomcat 7.0, then next.
-    - Make sure Tomcat installation is :
-    
-        /usr/local/apache-tomcat-70.0.52
-            
+    - Make sure Tomcat installation path is the one you get when you execute `echo $CATALINA_HOME` on a terminal.
     - Click on Finish 
   - 2. Add a new server :
     - Go on Window > Show View > Servers
@@ -84,12 +85,19 @@ Coming soon.
     - Some people (including I) may see a 404 page error at this step. Don't worry, your tomcat is running. We just need to do an extra configuration.
     - Back on Eclipse, double-click on the server name and a server configuration window should appear. Make sure the radio button `User Tomcat Installation` is ticked. Verify that the *Server Path* is also set to `/usr/local/apache-tomcat-70.0.52`.
     - Restart the server. You should know see the Tomcat server normally.
+    - If you have done the tomcat user setup (see Setup Java+Tomcat section), then you should be able to logon onto the Tomcat manager app and see all your current applications. The username and password are both "admin". The manager app will allow you to access your app more easily in the future from the Tomcat main page.
 
 #### Write your first Tomcat web application
-Coming soon...
+You can follow this [tutorial](http://www.srccodes.com/p/article/2/JSP-Hello-World-Program-using-Eclipse-IDE-and-Tomcat-web-server)
+You now have a working HelloWorld simple JSP web app. However, if go on http://localhost:8080/HelloWorldJSP/, you will get a 404 error. 
+This is because the `web.xml` file which manages your web app did not include your HelloWorld.jsp file as a welcome file.
+You can fix this the following way : 
+ - I have included the `web.xml` you want in this repository under `HelloWorldJSP/web.xml`. 
+ - You should put this file in the WEBINF directory of your application. 
+ - If you restart the application using Eclipse (as described in the tutorial for this section), you can now access http://localhost:8080/HelloWorldJSP/ and get the correct output.
 
 #### Write your first JSP program
 Coming soon...
 
-#### Write your first Java Hibernate ORM application    
+#### Write your first Java JDBC app    
 Coming soon...
