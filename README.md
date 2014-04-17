@@ -121,7 +121,7 @@ You now have a working HelloWorld simple JSP web app. However, if go on http://l
 This is because the `web.xml` file which manages your web app did not include your HelloWorld.jsp file as a welcome file.
 You can fix this the following way : 
  
- - I have included the `web.xml` you want in this repository under `HelloWorldJSP/web.xml`. 
+ - I have included the `web.xml` you want in this repository under `eclispe-examples/jsp-examples/HelloWorldJSP/WebContent/WEB-INF/web.xml`. 
  - You should put this file in the WEBINF directory of your application. 
  - If you restart the application using Eclipse (as described in the tutorial for this section), you can now access http://localhost:8080/HelloWorldJSP/ and get the correct output.
 
