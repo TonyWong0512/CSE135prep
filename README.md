@@ -86,7 +86,7 @@ It would be better if you could do that yourself :
  - Log out from the postgres user and enter the command `psql -d cse135`. This connects you to the database, from here you can issue SQL statements.
  - To quit psql, just issue the command `\q`.
  
-You can setup an example database with the enrollment.sql file from this repository (also available on the course website). You can use `psql -f enrollment.sql`.
+You can setup an example database with the SQL/enrollment.sql file from this repository (also available on the course website). You can use `psql -f enrollment.sql`.
 
 #### Setup A Tomcat server on Eclipse
 

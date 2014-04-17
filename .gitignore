@@ -2,3 +2,4 @@
 .project
 *.md.html
 .classpath
+.DS_Store
