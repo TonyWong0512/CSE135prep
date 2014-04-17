@@ -12,6 +12,15 @@ Only the following technologies are required for the project :
 The other technologies are personal suggestions that I believe will make your life easier. 
 For example, I will be able to help those who follow my suggestions much better :).
 
+### Directory Structure
+
+This git repository contains different files to help you get setup :
+
+ - the presentations folder includes the slides I used for the week 3 discussion session.
+ - the tomcat-config folder contains files to help you setup tomcat.
+ - the eclipse-examples contains eclipse compatible projects.
+ - the tomcat-examples contains projects to be put under the webapps folder of tomcat. Note that each example should have an eclipse compatible and a tomcat compatible version. If it does not have it yet, it's because it's coming soon.  
+
 ### Install a Ubuntu Virtual Machine
 
 I suggest you use a Ubuntu virtual machine to build your project. 
