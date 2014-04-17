@@ -1,11 +1,12 @@
 <html>
 
 <body>
+<h2>Attempt 3</h2>
 <table>
     <tr>
         <td valign="top">
             <%-- -------- Include menu HTML code -------- --%>
-            <jsp:include page="../menu.html" />
+            <jsp:include page="/menu.html" />
         </td>
         <td>
             <%-- Import the java.sql package --%>
@@ -23,7 +24,7 @@
 
                 // Open a connection to the database using DriverManager
                 conn = DriverManager.getConnection(
-                    "jdbc:postgresql://localhost/jdbc-examples?" +
+                    "jdbc:postgresql://localhost/cse135?" +
                     "user=postgres&password=postgres");
             %>
             
@@ -123,7 +124,7 @@
             </tr>
 
             <tr>
-                <form action="students.jsp" method="POST">
+                <form action="attempt3/students.jsp" method="POST">
                     <input type="hidden" name="action" value="insert"/>
                     <th>&nbsp;</th>
                     <th><input value="" name="pid" size="10"/></th>
@@ -141,7 +142,7 @@
             %>
 
             <tr>
-                <form action="students.jsp" method="POST">
+                <form action="attempt3/students.jsp" method="POST">
                     <input type="hidden" name="action" value="update"/>
                     <input type="hidden" name="id" value="<%=rs.getInt("id")%>"/>
 
@@ -173,7 +174,7 @@
                 <%-- Button --%>
                 <td><input type="submit" value="Update"></td>
                 </form>
-                <form action="students.jsp" method="POST">
+                <form action="attempt3/students.jsp" method="POST">
                     <input type="hidden" name="action" value="delete"/>
                     <input type="hidden" value="<%=rs.getInt("id")%>" name="id"/>
                     <%-- Button --%>
