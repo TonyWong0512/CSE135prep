@@ -56,11 +56,11 @@ You can now clone the repository CSE135prep onto your vm by issuing the command 
 
 #### Setup Java + Tomcat
 
-I have written a script called `Tomcat/tomcat_setup.sh` that should be included in this git repository. Make sure to make it executable by using the command `chmod +x tomcat_setup.sh` before executing it. You can execute this script on your machine.
+I have written a script called `tomcat-config/tomcat_setup.sh` that should be included in this git repository. Make sure to make it executable by using the command `chmod +x tomcat_setup.sh` before executing it. You can execute this script on your machine.
 It will install java (v1.6) and Tomcat (v7.0.53) on your VM, move them to appropriate directories and setup your `$CATALINA_HOME` and `$JAVA_HOME` variables.
 
 The only thing this script does not do is setup your tomcat users :
- - copy the file `Tomcat/tomcat_users.xml` from this repository into `$CATALINA_HOME/conf`.
+ - copy the file `tomcat-config/tomcat_users.xml` from this repository into `$CATALINA_HOME/conf`.
 
 #### Install Eclipse
 
@@ -125,5 +125,6 @@ Now go on Eclipse, you will see how to run the MultiplierJSP example from scratc
  - Copy the three .jsp files from the MultiplierJSP example in the git repository and add them under `WebContent` in your eclipse project.
  - Run your app on the server like you did in the srccodes tutorial. 
 
-#### Write your first Java JDBC app    
-The final exercise is to use a link postgres to your JSP app.
+#### Write your first Java JDBC app
+    
+Coming soon...
