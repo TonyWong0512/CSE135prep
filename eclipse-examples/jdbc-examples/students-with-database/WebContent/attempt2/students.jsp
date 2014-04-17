@@ -1,11 +1,12 @@
 <html>
 
 <body>
+<h2>Attempt 2</h2>
 <table>
     <tr>
         <td valign="top">
             <%-- -------- Include menu HTML code -------- --%>
-            <jsp:include page="../menu.html" />
+            <jsp:include page="/menu.html" />
         </td>
         <td>
             <%-- Import the java.sql package --%>
@@ -23,7 +24,7 @@
 
                 // Open a connection to the database using DriverManager
                 conn = DriverManager.getConnection(
-                    "jdbc:postgresql://localhost/jdbc-examples?" +
+                    "jdbc:postgresql://localhost/cse135?" +
                     "user=postgres&password=postgres");
             %>
             
@@ -74,7 +75,7 @@
             </tr>
 
             <tr>
-                <form action="students.jsp" method="POST">
+                <form action="attempt2/students.jsp" method="POST">
                     <input type="hidden" name="action" value="insert"/>
                     <th>&nbsp;</th>
                     <th><input value="" name="pid" size="10"/></th>
