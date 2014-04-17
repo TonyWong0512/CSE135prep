@@ -52,6 +52,8 @@ It is very easy to install git on ubuntu. Just type the following command on the
 
    sudo apt-get install git
 
+You can now clone the repository CSE135prep onto your vm by issuing the command `git clone https://github.com/jtestard/CSE135prep`.
+
 #### Setup Java + Tomcat
 
 I have written a script called `Tomcat/tomcat_setup.sh` that should be included in this git repository. Make sure to make it executable by using the command `chmod +x tomcat_setup.sh` before executing it. You can execute this script on your machine.
@@ -72,6 +74,7 @@ Issue the following command on your terminal (you need admin privileges) :
 
 This way, you should get a recent version of PostgreSQL.
 The PostgreSQL installation creates a unix user called `postgres` which is the only one allowed (at first) to create databases. 
+
 It would be better if you could do that yourself :
  - Enter the command `sudo passwd postgres` on your terminal. This lets you create a new password for the postgres user (for some reason, the postgres user does not have a default password).
  - Enter the command `su postgres` and use the password to login into the postgres user.
@@ -81,7 +84,9 @@ It would be better if you could do that yourself :
         createdb cse135
 
  - Log out from the postgres user and enter the command `psql -d cse135`. This connects you to the database, from here you can issue SQL statements.
- - To quit psql, just issue the command `\q1`.
+ - To quit psql, just issue the command `\q`.
+ 
+You can setup an example database with the enrollment.sql file from this repository (also available on the course website). You can use `psql -f enrollment.sql`.
 
 #### Setup A Tomcat server on Eclipse
 
@@ -102,16 +107,23 @@ It would be better if you could do that yourself :
     - If you have done the tomcat user setup (see Setup Java+Tomcat section), then you should be able to logon onto the Tomcat manager app and see all your current applications. The username and password are both "admin". The manager app will allow you to access your app more easily in the future from the Tomcat main page.
 
 #### Write your first Tomcat web application
-You can follow this [tutorial](http://www.srccodes.com/p/article/2/JSP-Hello-World-Program-using-Eclipse-IDE-and-Tomcat-web-server)
+You can follow this [srccodes tutorial](http://www.srccodes.com/p/article/2/JSP-Hello-World-Program-using-Eclipse-IDE-and-Tomcat-web-server).
 You now have a working HelloWorld simple JSP web app. However, if go on http://localhost:8080/HelloWorldJSP/, you will get a 404 error. 
 This is because the `web.xml` file which manages your web app did not include your HelloWorld.jsp file as a welcome file.
 You can fix this the following way : 
+ 
  - I have included the `web.xml` you want in this repository under `HelloWorldJSP/web.xml`. 
  - You should put this file in the WEBINF directory of your application. 
  - If you restart the application using Eclipse (as described in the tutorial for this section), you can now access http://localhost:8080/HelloWorldJSP/ and get the correct output.
 
 #### Write your first JSP program
-Coming soon...
+You should have pulled this git repo onto your VM by now. You should see the three examples yannis provided under the `jsp-examples` folder. 
+Now go on Eclipse, you will see how to run the MultiplierJSP example from scratch:
+ 
+ - Create a new dynamic web project (like you did in the srccodes tutorial) and use `MultiplierJSP` as the name of your project and go on finish.
+ - Notice that your project does not contain a `web.xml` file yet. Copy the web.xml file from the MultiplierJSP example in the git repository into your eclipse under `WebContent/WEB-INF`.
+ - Copy the three .jsp files from the MultiplierJSP example in the git repository and add them under `WebContent` in your eclipse project.
+ - Run your app on the server like you did in the srccodes tutorial.  
 
 #### Write your first Java JDBC app    
 Coming soon...

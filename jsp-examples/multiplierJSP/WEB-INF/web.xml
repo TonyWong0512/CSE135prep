@@ -9,13 +9,20 @@
 	<!--  General Web Application Description -->
 	<display-name>Multiplier built as JSP</display-name>
 
+	
+ 	 <welcome-file-list>
+ 	     <welcome-file>
+ 	         multiplier.html
+ 	     </welcome-file> 
+ 	</welcome-file-list>
+ 	
 	<description>
 		Multiplies times 3, using JSP
  	</description>
-
+ 	
 	<servlet>
 		<servlet-name>multiplier</servlet-name>
-		<jsp-file>multiplyJSP.jsp</jsp-file>
+		<jsp-file>/multiplyJSP.jsp</jsp-file>
 	</servlet>
 
 	<servlet-mapping>
