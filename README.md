@@ -123,7 +123,7 @@ Now go on Eclipse, you will see how to run the MultiplierJSP example from scratc
  - Create a new dynamic web project (like you did in the srccodes tutorial) and use `MultiplierJSP` as the name of your project and go on finish.
  - Notice that your project does not contain a `web.xml` file yet. Copy the web.xml file from the MultiplierJSP example in the git repository into your eclipse under `WebContent/WEB-INF`.
  - Copy the three .jsp files from the MultiplierJSP example in the git repository and add them under `WebContent` in your eclipse project.
- - Run your app on the server like you did in the srccodes tutorial.  
+ - Run your app on the server like you did in the srccodes tutorial. 
 
 #### Write your first Java JDBC app    
-Coming soon...
+The final exercise is to use a link postgres to your JSP app.
