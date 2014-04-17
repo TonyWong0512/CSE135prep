@@ -1,6 +1,5 @@
 #!/bin/bash
 cd ~
-sudo apt-get install tomcat7
 wget http://www.gtlib.gatech.edu/pub/apache/tomcat/tomcat-7/v7.0.53/bin/apache-tomcat-7.0.53.tar.gz
 tar xvzf apache-tomcat-7.0.53.tar.gz
 sudo mv apache-tomcat-7.0.53 /usr/local/
