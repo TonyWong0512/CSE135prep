@@ -39,7 +39,7 @@ The only part of this guide that will be cross platform will be how to obtain an
  
 You should now have a Ubuntu .iso file and Virtual Box installed. Follow these steps to create a Ubuntu VM :
 
- - Start Virtual Box and select the *New* tab. You will be asked the type and the version for the operating system of the VM. Make sure to select Linux (type) Ubuntu(64 bit) (version).
+ - Start Virtual Box and select the *New* tab. You will be asked the type and the version for the operating system of the VM. Make sure to select Linux (type) Ubuntu (version).
  - You may want to allocate at least 512MB of RAM (although probably more), it should be sufficient for our purposes, but you can increase it if you want.
  - The next page should ask you if you want to create a virtual disk. You should select option *Create a virtual disk now*.
  - When asked which format for the virtual disk, select `.vdi`.
@@ -121,13 +121,13 @@ You now have a working HelloWorld simple JSP web app. However, if go on http://l
 This is because the `web.xml` file which manages your web app did not include your HelloWorld.jsp file as a welcome file.
 You can fix this the following way : 
  
- - I have included the `web.xml` you want in this repository under `HelloWorldJSP/web.xml`. 
+ - I have included the `web.xml` you want in this repository under `eclispe-examples/jsp-examples/HelloWorldJSP/WebContent/WEB-INF/web.xml`. 
  - You should put this file in the WEBINF directory of your application. 
  - If you restart the application using Eclipse (as described in the tutorial for this section), you can now access http://localhost:8080/HelloWorldJSP/ and get the correct output.
 
 #### Write your first JSP program
 You should have pulled this git repo onto your VM by now. You should see the three examples yannis provided under the `jsp-examples` folder. 
-Now go on Eclipse, you will see how to run the MultiplierJSP example from scratch:
+Now go on Eclipse, you will see how to run the MultiplierJSP example (from eclipse-examples) from scratch:
  
  - Create a new dynamic web project (like you did in the srccodes tutorial) and use `MultiplierJSP` as the name of your project and go on finish.
  - Notice that your project does not contain a `web.xml` file yet. Copy the web.xml file from the MultiplierJSP example in the git repository into your eclipse under `WebContent/WEB-INF`.
@@ -136,4 +136,12 @@ Now go on Eclipse, you will see how to run the MultiplierJSP example from scratc
 
 #### Write your first Java JDBC app
     
-Coming soon...
+You need to have completed the tomcat setup and postgres setup to start this section. In particular, you should have created the `cse135` database.
+We will cover the `student-with-database` example (from eclipse example) :
+
+ - The example uses a hardcoded database name (cse135) and username (postgres) with password (postgres). You can change that in the code yourself or follow these instructions to setup the user and database accordingly. 
+   - You first need to populate the database. You should already have created the database cse135. Go to the folder of the student-with-database example and execute the command `psql -f ddl.sql`.
+   - You can setup the user by issuing the following command from within psql : `ALTER USER postgres WITH PASSWORD 'postgres'`.
+ - You can now setup your jsp program as you did before and the app should work fine.  
+ 
+ 
